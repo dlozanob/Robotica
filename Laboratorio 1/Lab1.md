@@ -1,48 +1,17 @@
 # Laboratorio 1
 
+## Introducción
+En esta práctica de laboratorio se buscaba realizar un primer acercamiento a la programación de robots industriales mediante la escritura del nombre de una marca con su respectivo texto. Para esto el equipo de trabajo debió realizar la definición del WorkObject, la definición de las trayectorias deseadas y la configuración de las entradas y salidas digitales en el software de simulación de RobotStudio y el diseño de la herramienta que permitiera sostener el marcador.
 
-Se debe presentar:
-- Descripción de la solución planteada.
-- Diagrama de flujo de acciones del robot.
-- Plano de planta de la ubicación de cada uno de los elementos.
-- Descripción de las funciones utilizadas.
-- Diseño de la herramienta.
-- Código en RAPID del módulo utilizado para el desarrollo de la práctica.
-- Vídeo que contenga la simulación en RobotStudio así como la implementación de la práctica con los robots reales.
+## 1- Descripción de la solución planteada.
+Para el desarrollo de la práctica se comenzó con el diseño preliminar de la herramienta en el software de Autodesk Inventor. La herramienta fue diseñada siguiendo las dimensiones del flanche del robot ABB IRB-140 y las dimensiones del marcador que se encontrará dentro del efector final. Adicionalmente, dentro del diseño de la herramienta se tuvieron en cuenta otros factores importantes como el uso de un sistema de amortiguación que le permitiera al robot por un lado ejercer una leve presión al papel para realizar un trazo claro, adaptandose a las posibles irregularidades o desniveles de la superficie y por otro lado, evitar que la herramienta y el marcador sean considerados ejercer una presión al papel para realizar un trazo claro   
 
-## Descripción de la solución planteada
-
-Se requiere dibujar el logotipo de una empresa haciendo uso del robot industrial IRB 140 disponible en el LAB SIR. Para programarlo se dispone del software Robot Studio, en el que se puede crear y simular la trayectoria deseada del robot. Robot Studio genera un código en RAPID (lenguaje de alto nivel interpretado por el procesador del módulo del robot) que describe las acciones del robot. Este código es cargado al módulo físico donde 
-
-### Configuraciones iniciales
-
-Dentro del programa se importa el robot nombrado anteriormente al área de trabajo:
-
-![[Pasted image 20240301182459.png]]
-
-Adicionalmente, se debe contar con el add-in _RobotWare 6.15.05_, el cual es un controlador virtual que simula al controlador que se tiene en el laboratorio. Se activa el controlador desde la opción:
-
-![[Pasted image 20240322184150.png]]
-
-![[Pasted image 20240322184337.png]]
-
-### 
-
-
-
-
-
-## Diagrama de flujo de las acciones del robot
-
-## Plano de planta de la ubicación de los elementos
-
-## Descripción de las funciones utilizadas
-
-## Diseño de la herramienta
-
-## Código en RAPID
-
-## Simulación e implementación
+## 2- Diagrama de flujo de acciones del robot.
+## 3- Plano de planta de la ubicación de cada uno de los elementos.
+## 4- Descripción de las funciones utilizadas.
+## 5- Diseño de la herramienta.
+## 6- Código en RAPID del módulo utilizado para el desarrollo de la práctica.
+## 7- Vídeo que contenga la simulación en RobotStudio así como la implementación de la práctica con los robots reales.
 
 
 
