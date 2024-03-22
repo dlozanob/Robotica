@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b809da1f60bf37cd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Laboratorio 1/Lab1.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "3641caef2f9521fc",
             "type": "leaf",
             "state": {
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -159,7 +146,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "747fd7ef72deb273",
+  "active": "3641caef2f9521fc",
   "lastOpenFiles": [
     "Laboratorio 1/Lab1.md",
     "Laboratorio 1/Untitled.md",
