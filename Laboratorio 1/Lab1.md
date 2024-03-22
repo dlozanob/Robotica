@@ -2,13 +2,13 @@
 
 
 Se debe presentar:
-- Descripci´on de la soluci´on planteada.
+- Descripción de la solución planteada.
 - Diagrama de flujo de acciones del robot.
-- Plano de planta de la ubicaci´on de cada uno de los elementos.
-- Descripci´on de las funciones utilizadas.
-- Dise˜no de la herramienta.
-- C´odigo en RAPID del m´odulo utilizado para el desarrollo de la pr´actica.
-- V´ıdeo que contenga la simulaci´on en RobotStudio as´ı como la implementaci´on de la pr´actica con los robots reales.
+- Plano de planta de la ubicación de cada uno de los elementos.
+- Descripción de las funciones utilizadas.
+- Diseño de la herramienta.
+- Código en RAPID del módulo utilizado para el desarrollo de la práctica.
+- Vídeo que contenga la simulación en RobotStudio así como la implementación de la práctica con los robots reales.
 
 ## Descripción de la solución planteada
 
