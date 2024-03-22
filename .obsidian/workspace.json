@@ -1,0 +1,158 @@
+{
+  "main": {
+    "id": "7ec95f66dd62b719",
+    "type": "split",
+    "children": [
+      {
+        "id": "3b28dd449b21c806",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b809da1f60bf37cd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Laboratorio 1/Lab1.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ec8bbc5dbf361e30",
+    "type": "split",
+    "children": [
+      {
+        "id": "de53f97cf310d54e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "747fd7ef72deb273",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "fcbae24909a5fda4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b59c9541e51288f3",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "40ed11fb4df4c1f1",
+    "type": "split",
+    "children": [
+      {
+        "id": "bd05747c8fde8e7a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c3dafde7ed53ae77",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Laboratorio 1/Lab1.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "90afaa89622c1f39",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Laboratorio 1/Lab1.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7006afa01ba072e6",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "07b9d0e8911d645b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Laboratorio 1/Lab1.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "b809da1f60bf37cd",
+  "lastOpenFiles": [
+    "Pasted image 20240301182459.png",
+    "Robotica/Laboratorio 1/Lab1.md",
+    "Robotica/Laboratorio 2/Lab2.md",
+    "Robotica/Laboratorio 3/Lab3.md",
+    "Robotica/Laboratorio 4/Lab4.md",
+    "Robotica/Laboratorio 5/Lab5.md"
+  ]
+}
