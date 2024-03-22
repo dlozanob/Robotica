@@ -26,6 +26,7 @@ Adicionalmente, se debe contar con el add-in _RobotWare 6.15.05_, el cual es un 
 
 ![[Pasted image 20240322184337.png]]
 
+### 
 
 
 
