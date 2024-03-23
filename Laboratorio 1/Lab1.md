@@ -23,7 +23,11 @@ Finalmente, para la fabricación de la herramienta se decidió utilizar manufact
 
 
 ## 2- Diagrama de flujo de acciones del robot.
+Posteriormente se planteó un diagrama de flujo que describirá cada una de las operaciones que deberá llevar a cabo el robot dentro del programa y las condiciones que se deben cumplir para ejecutarse:
 
+![](https://github.com/dlozanob/Robotica/blob/main/Laboratorio%201/Imagenes/Diagrama_Mov.robot.png)
+
+Se puede apreciar que las codiciones de entradas digitales se evalúan de forma secuencial y no en paralelo
 
 ## 3- Plano de planta de la ubicación de cada uno de los elementos.
 ## 4- Descripción de las funciones utilizadas.
