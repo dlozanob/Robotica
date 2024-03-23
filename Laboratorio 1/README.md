@@ -277,7 +277,7 @@ Finalmente, para la fabricación de la herramienta se decidió utilizar manufact
 
 
 ## 6- Vídeos de simulación e implementación
-
+[Video de la simulación y el montaje en el laboratorio](https://youtu.be/p-vVm9JOUPE)
 
 
 
