@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "f8c04b061076da03",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Laboratorio 1/README.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Laboratorio 1/README.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Laboratorio 1/README.md"
+                "file": "README.md"
               }
             }
           }
@@ -146,10 +159,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3a421e7db1f57500",
+  "active": "f8c04b061076da03",
   "lastOpenFiles": [
-    "Laboratorio 1/Untitled.md",
     "Laboratorio 1/README.md",
+    "Laboratorio 1/Untitled.md",
     "Laboratorio 1/Imagenes/Pasted image 20240322214609.png",
     "Laboratorio 1/Imagenes/Pasted image 20240322185946.png",
     "Laboratorio 1/Imagenes/Pasted image 20240301182459 1.png",
