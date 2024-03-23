@@ -17,7 +17,7 @@ Dentro del programa se importa el robot nombrado anteriormente al área de traba
 
 Adicionalmente, se debe contar con el add-in _RobotWare 6.15.05_, el cual es un controlador virtual que simula al controlador que se tiene en el laboratorio. Se activa el controlador desde la opción:
 
-![[Pasted image 20240322214609.png]]
+![](Imagenes/Pasted%20image%2020240322214609.png)
 
 
 
@@ -243,7 +243,7 @@ Se puede apreciar que las condiciones de entradas digitales se evalúan de forma
 
 ## 3- Plano de planta de la ubicación de cada uno de los elementos
 
-![[Pasted image 20240322213626.png]]
+![](Pasted%20image%2020240322213626.png)
 
 
 ## 4- Diseño de la herramienta

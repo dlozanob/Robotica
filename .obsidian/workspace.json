@@ -11,8 +11,12 @@
             "id": "3a421e7db1f57500",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Laboratorio 1/Lab1.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Laboratorio 1/Lab1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Laboratorio 1/Lab1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Laboratorio 1/Lab1.md"
+              }
             }
           }
         ]
@@ -140,18 +148,19 @@
   },
   "active": "3a421e7db1f57500",
   "lastOpenFiles": [
-    "Laboratorio 1/Imagenes/Pasted image 20240322214609.png",
-    "Laboratorio 1/Imagenes/Pasted image 20240322214501.png",
+    "Laboratorio 1/Imagenes/Pasted image 20240301182459 1.png",
     "Laboratorio 1/Lab1.md",
-    "Laboratorio 1/Imagenes/Pasted image 20240322214444.png",
-    "Laboratorio 1/Imagenes/Pasted image 20240322214203.png",
-    "Laboratorio 1/Imagenes/Pasted image 20240322214159.png",
+    "Laboratorio 1/Imagenes/Pasted image 20240301205858 1.png",
+    "Laboratorio 1/Imagenes/Pasted image 20240301210255 1.png",
+    "Laboratorio 1/Imagenes/Pasted image 20240301205701 1.png",
+    "Laboratorio 1/Imagenes/Pasted image 20240301205610 1.png",
+    "Laboratorio 1/Imagenes/Pasted image 20240301205352 1.png",
+    "Laboratorio 1/Imagenes/Pasted image 20240301205322 1.png",
+    "Laboratorio 1/Imagenes/Pasted image 20240301205247 1.png",
+    "Laboratorio 1/Imagenes/Pasted image 20240301205229 1.png",
+    "Laboratorio 1/Imagenes/Pasted image 20240301205211 1.png",
+    "Laboratorio 1/Imagenes/Pasted image 20240322204759 1.png",
     "Laboratorio 1/Untitled.md",
-    "Laboratorio 1/Imagenes/Pasted image 20240322213626.png",
-    "Laboratorio 1/Imagenes/Pasted image 20240322184138 1.png",
-    "Laboratorio 1/Imagenes/Pasted image 20240301182459.png",
-    "Laboratorio 1/Imagenes/Pasted image 20240322184337 1.png",
-    "Laboratorio 1/Imagenes/Pasted image 20240322184150 1.png",
     "Robotica/Laboratorio 1/Lab1.md",
     "Robotica/Laboratorio 2/Lab2.md",
     "Robotica/Laboratorio 3/Lab3.md",

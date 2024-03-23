@@ -8,13 +8,13 @@ Se requiere dibujar el logotipo de una empresa haciendo uso del robot industrial
 
 Dentro del programa se importa el robot nombrado anteriormente al área de trabajo:
 
-![](Imagenes/Pasted%20image%2020240301182459.png)
+![](Pasted%20image%2020240301182459%201.png)
 
 Adicionalmente, se debe contar con el add-in _RobotWare 6.15.05_, el cual es un controlador virtual que simula al controlador que se tiene en el laboratorio. Se activa el controlador desde la opción:
 
-![](Pasted%20image%2020240322184150%201.png)
+![](Imagenes/Pasted%20image%2020240322184150%201.png)
 
-![](Pasted%20image%2020240322184337%201.png)
+![](Imagenes/Pasted%20image%2020240322184337%201.png)
 
 ### Estrategia de definición de la trayectoria
 
@@ -33,33 +33,33 @@ Se elige el logotipo de _Mitsubishi Motors_ para ser representado.
 
 Para delimitar el espacio de trabajo se midió uno de los cuadrantes en los que se encuentra el robot en el laboratorio.
 
-![](Imagenes/Pasted%20image%2020240322190812.png)
+![](Pasted%20image%2020240322190812%201.png)
 
 Sabiendo esto, se dimensiona la pieza de tal manera que pueda ser posicionada dentro de este cuadrante.
 Se seleccionan dimensiones de $90$ x $42$ $cm$. Ahora bien, se modela la geometría en el software Autodesk Inventor.
 
-![](Imagenes/Pasted%20image%2020240322191737.png)
+![](Pasted%20image%2020240322191737%201.png)
 
 >![Note]
 >Se genera un Sketch y dentro de este se dibuja el logotipo y el nombre la empresa, tras esto, se usa la herramienta _Emboss_ que dispone el software, para generar un grabado sobre la superficie.
 
 Como se mencionó en la sección [Estrategia de definición de la trayectoria](#estrategia+de+definición+de+la+trayectoria), para definir los _targets_ que componen la trayectoria, es necesario que la pieza posea los bordes y vértices que la definen. No obstante, el programa solo reconocerá estos vértices si el tipo de archivo de la geometría es de tipo _.sat_. En _inventor_ se exporta la pieza creada con este tipo de extensión.
 
-![](Imagenes/Pasted%20image%2020240322193555.png)
+![](Pasted%20image%2020240322193555%201.png)
 
 Ahora bien, se importa la geometría al espacio de trabajo.
 
-![](Imagenes/Pasted%20image%2020240322193632.png)
+![](Pasted%20image%2020240322193632%201.png)
 
 El objeto ahora aparece dentro del programa. Se posiciona en la posición deseada:
 
-![](Imagenes/Pasted%20image%2020240322193741.png)
+![](Pasted%20image%2020240322193741%201.png)
 
-![](Imagenes/Pasted%20image%2020240322193757.png)
+![](Pasted%20image%2020240322193757%201.png)
 
 Se ha decidido posicionar el objeto de la siguiente manera para tomar ventaja del espacio y garantizar que el robot pueda dibujar sobre la superficie sin problemas.
 
-![](Imagenes/Pasted%20image%2020240322193836.png)
+![](Pasted%20image%2020240322193836%201.png)
 
 >[!Note]
 >Se utilizan cajas de madera para subir la superficie de dibujo, de tal manera que no se dibuje sobre tablero, sino sobre una superficie con un pliego de papel.
@@ -71,9 +71,9 @@ Se ha decidido posicionar el objeto de la siguiente manera para tomar ventaja de
 
 Este objeto define un sistema de coordenadas para la trayectoria que posteriormente es generada. La ventaja de esto, es que una serie de puntos pueden ser reposicionados y reorientados con solo cambiar el sistema de coordenadas que define al _Work object_.
 
-![](Imagenes/Pasted%20image%2020240322194944.png)
+![](Pasted%20image%2020240322194944%201.png)
 
-![](Imagenes/Pasted%20image%2020240322195519.png)
+![](Pasted%20image%2020240322195519%201.png)
 
 Se define el _Work object_ en una de las esquinas de la pieza.
 
@@ -82,45 +82,45 @@ Se define el _Work object_ en una de las esquinas de la pieza.
 
 Con la herramienta _Target_ se pueden definir los puntos de trayectoria:
 
-![](Imagenes/Pasted%20image%2020240322194437.png)
+![](Pasted%20image%2020240322194437%201.png)
 
-![](Imagenes/Pasted%20image%2020240322194445.png)
+![](Pasted%20image%2020240322194445%201.png)
 
-![](Imagenes/Pasted%20image%2020240322194629.png)
+![](Pasted%20image%2020240322194629%201.png)
 
 Se seleccionan de manera secuencial y se crean con respecto al objeto _Work object_ generado anteriormente.
 
-![](Imagenes/Pasted%20image%2020240322194714.png)
+![](Pasted%20image%2020240322194714%201.png)
 
 Una vez creados, debe modificarse la orientación del sistema de coordenadas de los _target_. 
 Esto teniendo en cuenta que el sistema de coordenadas del _TCP_ debe coincidir con el de los _targets_ para poder alcanzar estos puntos.
 
 Sistema de coordenadas del _TCP_ :
 
-![](Imagenes/Pasted%20image%2020240322195909.png)
+![](Pasted%20image%2020240322195909%201.png)
 
 
 Basta con reorientar uno de los _targets_ creados:
 
-![](Imagenes/Pasted%20image%2020240322195957.png)
+![](Pasted%20image%2020240322195957%201.png)
 
 Una vez reorientado se puede ver que el _TCP_ coincide con el _target_ modificado.
 
-![](Imagenes/Pasted%20image%2020240322200024.png)
+![](Pasted%20image%2020240322200024%201.png)
 
 Se copia la orientación del _target_ :
 
-![](Imagenes/Pasted%20image%2020240322200119.png)
+![](Pasted%20image%2020240322200119%201.png)
 
 Se aplica al resto de _targets_ :
 
-![](Imagenes/Pasted%20image%2020240322200204.png)
+![](Pasted%20image%2020240322200204%201.png)
 
 Los puntos que conforman la trayectoria ya están creados.
 
 Ahora se crea un objeto de tipo _Path_ :
 
-![](Imagenes/Pasted%20image%2020240322200301.png)
+![](Pasted%20image%2020240322200301%201.png)
 
 Para crear una trayectoria, debe especificarse lo siguiente:
 
@@ -138,17 +138,17 @@ Para crear una trayectoria, debe especificarse lo siguiente:
 
 Seleccionadas estas opciones:
 
-![](Imagenes/Pasted%20image%2020240322201030.png)
+![](Pasted%20image%2020240322201030%201.png)
 
 Se arrastran todos los _targets_ al _path_ generado.
 
-![](Imagenes/Pasted%20image%2020240322201045.png)
+![](Pasted%20image%2020240322201045%201.png)
 
 La trayectoria queda definida en el orden en el aparecen los _targets_ y con las configuraciones establecidas antes de arrastrarlos.
 
 Se debe crear un _path_ llamado _main_, el cual será la función de inicio del programa _RAPID_.
 
-![](Imagenes/Pasted%20image%2020240301205522.png)
+![](Pasted%20image%2020240301205522%201.png)
 
 Se arrastra aquí el _path_ generado.
 
@@ -156,13 +156,13 @@ Se arrastra aquí el _path_ generado.
 
 Se genera el código _RAPID_ al sincronizar los _paths_ de la estación al controlador virtual.
 
-![](Imagenes/Pasted%20image%2020240322201315.png)
+![](Pasted%20image%2020240322201315%201.png)
 
-![](Imagenes/Pasted%20image%2020240301204948.png)
+![](Pasted%20image%2020240301204948%201.png)
 
 Se puede simular el código de la siguiente manera:
 
-![](Imagenes/Pasted%20image%2020240322204759.png)
+![](Pasted%20image%2020240322204759%201.png)
 
 ### Entradas y salidas
 
@@ -171,25 +171,25 @@ El programa puede recibir señales digitales para ejecutar un proceso o emitir s
 
 Para acceder a las señales de entrada y de salida en Robot Studio:
 
-![](Imagenes/Pasted%20image%2020240301205211.png)
+![](Pasted%20image%2020240301205211%201.png)
 
-![](Imagenes/Pasted%20image%2020240301205229.png)
+![](Pasted%20image%2020240301205229%201.png)
 
 Se crean las señales:
 
-![](Imagenes/Pasted%20image%2020240301205247.png)
+![](Pasted%20image%2020240301205247%201.png)
 
-![](Imagenes/Pasted%20image%2020240301205322.png)
+![](Pasted%20image%2020240301205322%201.png)
 
 Se pueden ver las señales creadas a continuación:
 
-![](Imagenes/Pasted%20image%2020240301205352.png)
+![](Pasted%20image%2020240301205352%201.png)
 
 Ahora bien, para implementarlas en el algoritmo se deben de añadir al _path main_ .
 
-![](Imagenes/Pasted%20image%2020240301205610.png)
+![](Pasted%20image%2020240301205610%201.png)
 
-![](Imagenes/Pasted%20image%2020240301205701.png)
+![](Pasted%20image%2020240301205701%201.png)
 
 Dentro de las opciones mostradas, se usan:
 - _Wait DI_ : Espera a recibir un valor alto en la señal de entrada para ejecutar la siguiente instrucción
@@ -204,7 +204,7 @@ Adicionalmente, se genera un _path_ con la misma trayectoria del primer plano, s
 >[!Note]
 >En el laboratorio se disponía de este plano, pero tiene unas dimensiones más pequeñas que el primer plano, pudo haberse hecho la primer trayectoria con las mismas dimensiones del plano inclinado para solo tener que reposicionar el _Work object_, no obstante, el equipo decidió por dibujar el logotipo de ese tamaño aunque se tuviese que generar de nuevo la trayectoria para el plano inclinado
 
-![](Imagenes/Pasted%20image%2020240301210255.png)
+![](Pasted%20image%2020240301210255%201.png)
 
 >[!Note]
 >El plano inclinado tiene dimensiones $25$ x $25$ $cm$
@@ -215,7 +215,7 @@ Adicionalmente, se genera un _path_ con la misma trayectoria del primer plano, s
 Implementando las rutinas generadas, además de una posición de mantenimiento al final, y añadiendo entradas y salidas, el algoritmo queda de la siguiente manera:
 
 
-![](Imagenes/Pasted%20image%2020240301205858.png)
+![](Pasted%20image%2020240301205858%201.png)
 
 - Espera a la señal de inicio (_DI_01_)
 - Activación de la lámpara de indicación (_DO_01_)
