@@ -1,14 +1,5 @@
 # Laboratorio 1
 
-Se debe presentar:
-- Descripción de la solución planteada.
-- Diagrama de flujo de acciones del robot.
-- Plano de planta de la ubicación de cada uno de los elementos.
-- Descripción de las funciones utilizadas.
-- Diseño de la herramienta.
-- Código en RAPID del módulo utilizado para el desarrollo de la práctica.
-- Vídeo que contenga la simulación en RobotStudio así como la implementación de la práctica con los robots reales.
-
 ## Descripción de la solución planteada
 
 Se requiere dibujar el logotipo de una empresa haciendo uso del robot industrial IRB 140 disponible en el LAB SIR. Para programarlo se dispone del software Robot Studio, en el que se puede crear y simular la trayectoria deseada del robot. Robot Studio genera un código en RAPID (lenguaje de alto nivel interpretado por el procesador del módulo del robot) que describe las acciones del robot. Este código es cargado al módulo físico donde se ejecuta el algoritmo creado en Robot Studio.
@@ -214,6 +205,9 @@ Adicionalmente, se genera un _path_ con la misma trayectoria del primer plano, s
 >En el laboratorio se disponía de este plano, pero tiene unas dimensiones más pequeñas que el primer plano, pudo haberse hecho la primer trayectoria con las mismas dimensiones del plano inclinado para solo tener que reposicionar el _Work object_, no obstante, el equipo decidió por dibujar el logotipo de ese tamaño aunque se tuviese que generar de nuevo la trayectoria para el plano inclinado
 
 ![](Imagenes/Pasted%20image%2020240301210255.png)
+
+>[!Note]
+>El plano inclinado tiene dimensiones $25$ x $25$ $cm$
 
 
 ### Estructura del algoritmo
