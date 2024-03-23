@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Laboratorio 1/Lab1.md",
+                "file": "Laboratorio 1/README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Laboratorio 1/Lab1.md",
+                "file": "Laboratorio 1/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Laboratorio 1/Lab1.md",
+                "file": "Laboratorio 1/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Laboratorio 1/Lab1.md"
+                "file": "Laboratorio 1/README.md"
               }
             }
           }
@@ -149,7 +149,7 @@
   "active": "3a421e7db1f57500",
   "lastOpenFiles": [
     "Laboratorio 1/Imagenes/Pasted image 20240322214609.png",
-    "Laboratorio 1/Lab1.md",
+    "Laboratorio 1/README.md",
     "Laboratorio 1/Imagenes/Pasted image 20240322185946.png",
     "Laboratorio 1/Imagenes/Pasted image 20240301182459 1.png",
     "Laboratorio 1/Imagenes/Pasted image 20240301205858 1.png",
