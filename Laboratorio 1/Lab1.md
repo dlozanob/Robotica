@@ -17,7 +17,14 @@ Quedando completamente ensamblada de la siguiente forma:
 
 ![](https://github.com/dlozanob/Robotica/blob/main/Laboratorio%201/Imagenes/Ensamble-Herramienta.png)
 
+Finalmente, para la fabricación de la herramienta se decidió utilizar manufactura aditiva, obteniendo el siguiente resultado:
+
+![](https://github.com/dlozanob/Robotica/blob/main/Laboratorio%201/Imagenes/Imp3D.png)
+
+
 ## 2- Diagrama de flujo de acciones del robot.
+
+
 ## 3- Plano de planta de la ubicación de cada uno de los elementos.
 ## 4- Descripción de las funciones utilizadas.
 ## 5- Diseño de la herramienta.
