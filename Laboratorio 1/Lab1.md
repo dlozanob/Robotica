@@ -19,7 +19,10 @@ Adicionalmente, se debe contar con el add-in _RobotWare 6.15.05_, el cual es un 
 
 ![](Pasted%20image%2020240322184150%201.png)
 
+ss
+
 ![](Pasted%20image%2020240322184337%201.png)
+ss
 
 ### Estrategia de definición de la trayectoria
 
