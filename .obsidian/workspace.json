@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "40ed11fb4df4c1f1",
@@ -147,8 +146,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c0ed003b77933812",
+  "active": "747fd7ef72deb273",
   "lastOpenFiles": [
+    "Laboratorio 1/Imagenes/Pasted image 20240322214203.png",
+    "Laboratorio 1/Imagenes/Pasted image 20240322214159.png",
     "Laboratorio 1/Untitled.md",
     "Laboratorio 1/Lab1.md",
     "Laboratorio 1/Imagenes/Pasted image 20240322213626.png",
