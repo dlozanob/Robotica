@@ -8,7 +8,7 @@ Para el desarrollo de la práctica se comenzó con el diseño preliminar de la h
 
 Se decidió diseñar una herramienta compuesta de dos piezas, el cuerpo en donde se alojará el marcador y el resorte y la tapa, ambas unidas mediante una unión roscada.
 <p align= "center"> 
-<img src= "/Imagenes/Herramienta-cuerpo.png" align="center" style="max-width: 55%;">
+<img src= "Laboratorio%201/Imagenes/Herramienta-cuerpo.png" align="center" style="max-width: 55%;">
 </p>
 
 
