@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "3b28dd449b21c806",
+        "id": "454fbd4ea590d399",
         "type": "tabs",
         "children": [
           {
-            "id": "3641caef2f9521fc",
+            "id": "756fcf5068b59067",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -146,14 +146,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3641caef2f9521fc",
+  "active": "756fcf5068b59067",
   "lastOpenFiles": [
-    "Laboratorio 1/Lab1.md",
+    "Laboratorio 1/Imagenes/Pasted image 20240301182459.png",
     "Laboratorio 1/Untitled.md",
-    "Pasted image 20240322184337.png",
-    "Pasted image 20240322184150.png",
+    "Laboratorio 1/Lab1.md",
+    "Laboratorio 1/Imagenes/Pasted image 20240322184337 1.png",
+    "Laboratorio 1/Imagenes/Pasted image 20240322184150 1.png",
     "Pasted image 20240322184138.png",
-    "Laboratorio 1/Pasted image 20240301182459.png",
     "Pasted image 20240301182459.png",
     "Robotica/Laboratorio 1/Lab1.md",
     "Robotica/Laboratorio 2/Lab2.md",

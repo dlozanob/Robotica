@@ -1,4 +1,4 @@
-﻿# Laboratorio 1
+# Laboratorio 1
 
 ## Introducción
 En esta práctica de laboratorio se buscaba realizar un primer acercamiento a la programación de robots industriales mediante la escritura del nombre de una marca con su respectivo texto. Para esto el equipo de trabajo debió realizar la definición del WorkObject, la definición de las trayectorias deseadas y la configuración de las entradas y salidas digitales en el software de simulación de RobotStudio y el diseño de la herramienta que permitiera sostener el marcador.
