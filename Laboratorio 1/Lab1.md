@@ -17,12 +17,10 @@ Dentro del programa se importa el robot nombrado anteriormente al área de traba
 
 Adicionalmente, se debe contar con el add-in _RobotWare 6.15.05_, el cual es un controlador virtual que simula al controlador que se tiene en el laboratorio. Se activa el controlador desde la opción:
 
-![](Pasted%20image%2020240322184150%201.png)
+![[Pasted image 20240322214609.png]]
 
 
-![](Pasted%20image%2020240322184337%201.png)
 
-![[Pasted image 20240322214501.png]]
 
 ### Estrategia de definición de la trayectoria
 
