@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "13d9406d7f162889",
+        "id": "0ee8bcc3adfb44ec",
         "type": "tabs",
         "children": [
           {
-            "id": "3a421e7db1f57500",
+            "id": "d7da9eedd2249c45",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -146,13 +146,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "747fd7ef72deb273",
+  "active": "d7da9eedd2249c45",
   "lastOpenFiles": [
-    "Laboratorio 1/Pasted image 20240322220936.png",
+    "Laboratorio 1/~$Lab1.md",
+    "Laboratorio 1/Imagenes/Pasted image 20240301182459.png",
+    "Laboratorio 1/README.md",
+    "Laboratorio 1/Imagenes/Pasted image 20240322220936.png",
     "README.md",
     "Laboratorio 1/fixPath.py",
     "Laboratorio 1/Module1.mod",
-    "Laboratorio 1/README.md",
     "Laboratorio 1/Untitled.md",
     "Laboratorio 1/Imagenes/Pasted image 20240322214609.png",
     "Laboratorio 1/Imagenes/Pasted image 20240322185946.png",
@@ -162,8 +164,6 @@
     "Laboratorio 1/Imagenes/Pasted image 20240301205701 1.png",
     "Laboratorio 1/Imagenes/Pasted image 20240301205610 1.png",
     "Laboratorio 1/Imagenes/Pasted image 20240301205352 1.png",
-    "Laboratorio 1/Imagenes/Pasted image 20240301205322 1.png",
-    "Laboratorio 1/Imagenes/Pasted image 20240301205247 1.png",
     "Robotica/Laboratorio 1/Lab1.md",
     "Robotica/Laboratorio 2/Lab2.md",
     "Robotica/Laboratorio 3/Lab3.md",

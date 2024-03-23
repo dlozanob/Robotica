@@ -248,7 +248,7 @@ Se puede apreciar que las condiciones de entradas digitales se evalúan de forma
 
 ## 3- Plano de planta de la ubicación de cada uno de los elementos
 
-![[Pasted image 20240322220936.png]]
+![](Imagenes/Pasted%20image%2020240322220936.png)
 
 
 ## 4- Diseño de la herramienta
