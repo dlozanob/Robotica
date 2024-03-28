@@ -22,7 +22,10 @@ El programa se comunica con el controlador mediante USB, seleccionando la opció
 
 ![[Pasted image 20240327222047.png]]
 
+### Definición de los puntos
+
 En la pestaña de administrador del robot, se mueve la máquina a una posición de _Home_, se enseña la posición y se le da el nombre de _Origen_.
+
 Así mismo, moviendo el efector final del robot mediante los ejes coordenados globales, se establecen dos posiciones más:
 
 - _Eje x_ : Punto distanciado de _Home_ únicamente por el eje _x_
@@ -49,6 +52,8 @@ Se poseen los siguientes puntos:
 
 ![[Pasted image 20240327222832.png]]
 
+### Código del programa
+
 Ahora bien, se modifica el código _SPEL+_ del programa en el archivo `Main.prg`.
 
 Se declaran variables globales, como la variable `altura`, la cual define el desplazamiento en el eje $z$ en las funciones de paletizado.
@@ -69,7 +74,7 @@ Al inicio el robot se desplaza a su posición _Home_ y entra un bucle de tipo _D
 Las funciones de paletizado se caracterizan por brindar el índice del elemento de la cuadrícula.
 `Go Pallet(<# instancia paletizado>, <índice del elemento>)`
 
-Para el paletizado en $z$ se instancia el objeto _Pallet_ con una cuadrícula de $3$ x $3$, planteando como base a los 3 puntos anteriormente generados.
+Para el _paletizado en z_ se instancia el objeto _Pallet_ con una cuadrícula de $3$ x $3$, planteando como base a los 3 puntos anteriormente generados.
 
 ![[Pasted image 20240327230046.png]]
 
@@ -79,18 +84,30 @@ Cada iteración debe estar inicialmente en un valor mayor de $z$, de tal manera 
 
 ![[Pasted image 20240327225144.png]]
 
+Se genera la siguiente trayectoria:
+
+![[Pasted image 20240327231436.png]]
+
 >[!Note]
 >Debido a que el robot es de tipo 6 ejes, deben ajustarse los valores de $z$ por iteración, este ajuste adicional no habría que hacerlo con un robot _Scara_
 
+La función de _paletizado en s_ posee la misma estructura: instanciación del objeto _Pallet_, iterar el índice, y desplazar el robot al elemento de la cuadrícula correspondiente, variando la altura en el eje $z$ por iteración.
 
-
-
-
-
+No obstante, aquí se modifica el iterador $i$ con la variable $k$ (iterador modificado). De tal manera que la secuencia es: 1,2,3,6,5,4,7,8,9.
 
 ![[Pasted image 20240327225203.png]]
 
+Se genera la siguiente trayectoria:
+
+![[Pasted image 20240327231510.png]]
+
+Por último, para realizar la rutina de _paletizado externo_, se instancia igualmente como en los anteriores casos pero ahora se añade la palabra clave `Outside`.
+
+El modo en el que se indica el elemento dentro de la cuadrícula es distinto. La cuadrícula tiene coordenadas $(i, j)$, se itera sobre ellas para cubrir todos los elementos. Debido a que el elemento _Pallet_ es una cuadrícula de $3$ x $3$ y se itera hasta $4$ en cada coordenada, el robot hace su paletizado externamente a la cuadrícula planteada.
+
 ![[Pasted image 20240327225251.png]]
 
+Se genera la siguiente trayectoria:
 
+![[Pasted image 20240327231532.png]]
 
