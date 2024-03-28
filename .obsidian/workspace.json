@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "dde6d09900620d3d",
+        "id": "f6b64aab2aa4b27f",
         "type": "tabs",
         "children": [
           {
-            "id": "8a338c7db1533fbf",
+            "id": "a0539c510f6ad2be",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -146,21 +146,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8a338c7db1533fbf",
+  "active": "a0539c510f6ad2be",
   "lastOpenFiles": [
-    "Pasted image 20240327232030.png",
-    "Pasted image 20240327232003.png",
-    "Pasted image 20240327231721.png",
-    "Pasted image 20240327231532.png",
-    "Pasted image 20240327231510.png",
-    "Pasted image 20240327231436.png",
-    "Pasted image 20240327231425.png",
-    "Pasted image 20240327230046.png",
-    "Pasted image 20240327225423.png",
-    "Pasted image 20240327225251.png",
-    "Pasted image 20240327225203.png",
-    "Laboratorio 2/Programa.md",
+    "Laboratorio 2/Imagenes/Pasted image 20240327222047.png",
     "Laboratorio 2/README.md",
+    "Laboratorio 2/Imagenes",
+    "Laboratorio 2/Neuer Ordner",
+    "Laboratorio 2/Imagenes/Pasted image 20240327232030.png",
+    "Laboratorio 2/Imagenes/Pasted image 20240327232003.png",
+    "Laboratorio 2/Imagenes/Pasted image 20240327231721.png",
+    "Laboratorio 2/Imagenes/Pasted image 20240327231532.png",
+    "Laboratorio 2/Imagenes/Pasted image 20240327231510.png",
+    "Laboratorio 2/Imagenes/Pasted image 20240327231436.png",
+    "Laboratorio 2/Imagenes/Pasted image 20240327231425.png",
+    "Laboratorio 2/Imagenes/Pasted image 20240327230046.png",
+    "Laboratorio 2/Imagenes/Pasted image 20240327225423.png",
+    "Laboratorio 2/Imagenes/Pasted image 20240327225251.png",
+    "Laboratorio 2/Programa.md",
     "Laboratorio 1/README.md",
     "Laboratorio 1/~$Lab1.md",
     "README.md",
