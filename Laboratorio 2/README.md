@@ -20,7 +20,7 @@ El algoritmo desarrollado por el robot se descompone en $3$ rutinas principales:
 
 El programa se comunica con el controlador mediante USB, seleccionando la opción en la interfaz de usuario:
 
-![[Pasted image 20240327222047.png]]
+![](Imagenes/Pasted%20image%2020240327222047.png)
 
 ### Definición de los puntos
 
@@ -34,9 +34,9 @@ Así mismo, moviendo el efector final del robot mediante los ejes coordenados gl
 >[!Note]
 >Las distancias a _Home_ fueron arbitrarias, siempre y cuando el robot no colisionase con algún objeto, y las coordenadas estuviesen dentro del espacio de trabajo del efector final
 
-![[Pasted image 20240327222615.png]]
+![](Imagenes/Pasted%20image%2020240327222615.png)
 
-![[Pasted image 20240327222813.png]]
+![](Imagenes/Pasted%20image%2020240327222813.png)
 
 Procedimiento de enseñanza de coordenadas:
 1. Establecer pose de origen del robot
@@ -50,7 +50,7 @@ Procedimiento de enseñanza de coordenadas:
 
 Se poseen los siguientes puntos:
 
-![[Pasted image 20240327222832.png]]
+![](Imagenes/Pasted%20image%2020240327222832.png)
 
 ### Código del programa
 
@@ -61,7 +61,7 @@ La función principal `main` ordena el encendido de motores y el nivel de potenc
 
 Al inicio el robot se desplaza a su posición _Home_ y entra un bucle de tipo _Do While_. Se hace llamado a las funciones de _paletizado en z_, _paletizado en s_ y _paletizado externo_, en ese mismo orden.
 
-![[Pasted image 20240327224327.png]]
+![](Imagenes/Pasted%20image%2020240327224327.png)
 
 >[!Note]
 >`Out_11` y `Out_12` son variables de salidas digitales, en la práctica no se usan
@@ -76,17 +76,17 @@ Las funciones de paletizado se caracterizan por brindar el índice del elemento 
 
 Para el _paletizado en z_ se instancia el objeto _Pallet_ con una cuadrícula de $3$ x $3$, planteando como base a los 3 puntos anteriormente generados.
 
-![[Pasted image 20240327230046.png]]
+![](Imagenes/Pasted%20image%2020240327230046.png)
 
 Se itera sobre los índices desde el elemento $1$ hasta el $9$.
 
 Cada iteración debe estar inicialmente en un valor mayor de $z$, de tal manera que posteriormente el _TCP_ descienda a un valor menor de $z$ y finalmente vuelva a la coordenada de $z$ inicial.
 
-![[Pasted image 20240327225144.png]]
+![](Imagenes/Pasted%20image%2020240327225144.png)
 
 Se genera la siguiente trayectoria:
 
-![[Pasted image 20240327231436.png]]
+![](Imagenes/Pasted%20image%2020240327231436.png)
 
 >[!Note]
 >Debido a que el robot es de tipo 6 ejes, deben ajustarse los valores de $z$ por iteración, este ajuste adicional no habría que hacerlo con un robot _Scara_
@@ -95,33 +95,33 @@ La función de _paletizado en s_ posee la misma estructura: instanciación del o
 
 No obstante, aquí se modifica el iterador $i$ con la variable $k$ (iterador modificado). De tal manera que la secuencia es: 1,2,3,6,5,4,7,8,9.
 
-![[Pasted image 20240327225203.png]]
+![](Imagenes/Pasted%20image%2020240327225203.png)
 
 Se genera la siguiente trayectoria:
 
-![[Pasted image 20240327231510.png]]
+![](Imagenes/Pasted%20image%2020240327231510.png)
 
 Por último, para realizar la rutina de _paletizado externo_, se instancia igualmente como en los anteriores casos pero ahora se añade la palabra clave `Outside`.
 
 El modo en el que se indica el elemento dentro de la cuadrícula es distinto. La cuadrícula tiene coordenadas $(i, j)$, se itera sobre ellas para cubrir todos los elementos. Debido a que el elemento _Pallet_ es una cuadrícula de $3$ x $3$ y se itera hasta $4$ en cada coordenada, el robot hace su paletizado externamente a la cuadrícula planteada.
 
-![[Pasted image 20240327225251.png]]
+![](Imagenes/Pasted%20image%2020240327225251.png)
 
 Se genera la siguiente trayectoria:
 
-![[Pasted image 20240327231532.png]]
+![](Imagenes/Pasted%20image%2020240327231532.png)
 
 ## Ejecución del programa
 
 Debe compilarse el código para verificar que este no posea errores sintácticos o de funcionamiento:
 
-![[Pasted image 20240327232030.png]]
+![](Imagenes/Pasted%20image%2020240327232030.png)
 
-![[Pasted image 20240327232003.png]]
+![](Imagenes/Pasted%20image%2020240327232003.png)
 
 Una vez hecho esto, se abre la ventana de ejecución:
 
-![[Pasted image 20240327231721.png]]
+![](Imagenes/Pasted%20image%2020240327231721.png)
 
 Si se corre por primera vez el programa, la casilla de _Baja potencia_ debe estar activada para que se limite la velocidad y se eviten accidentes por colisión del robot con algún objeto dentro de su espacio de trabajo. Después de verificado el código en funcionamiento, se puede desactivar esta casilla. 
 
