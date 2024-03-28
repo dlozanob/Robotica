@@ -127,6 +127,9 @@ Si se corre por primera vez el programa, la casilla de _Baja potencia_ debe esta
 
 Se selecciona la función principal `main` para ejecutar el programa y se selecciona _Iniciar_.
 
+>[!Info]
+>El programa completo desarrollado para la práctica se encuentra disponible en: [Código](https://github.com/dlozanob/Robotica/blob/main/Laboratorio%202/Programa.md)
+
 ## Implementación
 
 
