@@ -111,3 +111,27 @@ Se genera la siguiente trayectoria:
 
 ![[Pasted image 20240327231532.png]]
 
+## Ejecución del programa
+
+Debe compilarse el código para verificar que este no posea errores sintácticos o de funcionamiento:
+
+![[Pasted image 20240327232030.png]]
+
+![[Pasted image 20240327232003.png]]
+
+Una vez hecho esto, se abre la ventana de ejecución:
+
+![[Pasted image 20240327231721.png]]
+
+Si se corre por primera vez el programa, la casilla de _Baja potencia_ debe estar activada para que se limite la velocidad y se eviten accidentes por colisión del robot con algún objeto dentro de su espacio de trabajo. Después de verificado el código en funcionamiento, se puede desactivar esta casilla. 
+
+Se selecciona la función principal `main` para ejecutar el programa y se selecciona _Iniciar_.
+
+## Implementación
+
+
+
+
+
+
+
