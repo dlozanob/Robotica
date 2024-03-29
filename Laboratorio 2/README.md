@@ -100,6 +100,10 @@ Se genera la siguiente trayectoria:
 
 ![](Imagenes/Pasted%20image%2020240327231510.png)
 
+Otra solución a esta operación es invertir el orden de las posiciones 4, 5 y 6 de la siguiente forma:
+
+![](Imagenes/PaletizadoS2.png)
+
 Por último, para realizar la rutina de _paletizado externo_, se instancia igualmente como en los anteriores casos pero ahora se añade la palabra clave `Outside`.
 
 El modo en el que se indica el elemento dentro de la cuadrícula es distinto. La cuadrícula tiene coordenadas $(i, j)$, se itera sobre ellas para cubrir todos los elementos. Debido a que el elemento _Pallet_ es una cuadrícula de $3$ x $3$ y se itera hasta $4$ en cada coordenada, el robot hace su paletizado externamente a la cuadrícula planteada.
