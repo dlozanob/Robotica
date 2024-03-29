@@ -5,7 +5,6 @@
 - Oscar Julian Olivos Aguirre
 - Daniel Lozano Barrero
 
-## Introducción
 
 ## Desarrollo de la práctica
 
