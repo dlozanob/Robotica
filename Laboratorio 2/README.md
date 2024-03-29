@@ -134,8 +134,9 @@ Se selecciona la función principal `main` para ejecutar el programa y se selecc
 >El programa completo desarrollado para la práctica se encuentra disponible en: [Código](https://github.com/dlozanob/Robotica/blob/main/Laboratorio%202/Programa.md)
 
 ## Implementación
+A continuación se puede encontrar el video de la implementación:
 
-
+[Implementación de el las oficinas de Control de Movimiento](https://youtu.be/5Km0qbkk8Kg)
 
 
 
