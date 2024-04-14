@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "4d8217a457a63fc6",
+        "id": "19699c1405cd9b54",
         "type": "tabs",
         "children": [
           {
-            "id": "3160998f3f3f1296",
+            "id": "d50dee59937779f2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Laboratorio 2/README.md",
+                "file": "Laboratorio 1/README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fd134a6f3cd3738f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Laboratorio 3/README.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Laboratorio 2/README.md",
+                "file": "Laboratorio 3/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Laboratorio 2/README.md",
+                "file": "Laboratorio 3/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Laboratorio 2/README.md"
+                "file": "Laboratorio 3/README.md"
               }
             }
           }
@@ -146,23 +159,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3160998f3f3f1296",
+  "active": "fd134a6f3cd3738f",
   "lastOpenFiles": [
+    "Pasted image 20240414174908.png",
+    "Pasted image 20240414174838.png",
+    "Pasted image 20240414174649.png",
+    "Pasted image 20240414173405.png",
+    "Pasted image 20240414173318.png",
+    "Pasted image 20240414172917.png",
+    "Pasted image 20240414172515.png",
+    "Laboratorio 1/README.md",
+    "Laboratorio 3/README.md",
+    "Laboratorio 2/README.md",
     "Laboratorio 2/Programa.md",
     "Laboratorio 2/Imagenes/Pasted image 20240327222047.png",
     "Laboratorio 1/Imagenes/Pasted image 20240322220936.png",
     "Laboratorio 1/Imagenes/Pasted image 20240301182459.png",
-    "Laboratorio 2/README.md",
     "Laboratorio 2/Imagenes",
     "Laboratorio 2/Neuer Ordner",
     "Laboratorio 2/Imagenes/Pasted image 20240327232030.png",
-    "Laboratorio 2/Imagenes/Pasted image 20240327232003.png",
-    "Laboratorio 2/Imagenes/Pasted image 20240327231721.png",
-    "Laboratorio 2/Imagenes/Pasted image 20240327231532.png",
-    "Laboratorio 2/Imagenes/Pasted image 20240327231510.png",
-    "Laboratorio 2/Imagenes/Pasted image 20240327231436.png",
-    "Laboratorio 2/Imagenes/Pasted image 20240327231425.png",
-    "Laboratorio 1/README.md",
     "Laboratorio 1/~$Lab1.md",
     "README.md",
     "Laboratorio 1/fixPath.py",

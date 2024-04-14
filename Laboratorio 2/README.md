@@ -5,7 +5,6 @@
 - Oscar Julian Olivos Aguirre
 - Daniel Lozano Barrero
 
-
 ## Desarrollo de la práctica
 
 La guía propuesta para el desarrollo de la práctica de laboratorio en las instalaciones de CDM, dispones de instrucciones para la programación de un robot _SCARA T6_ de la marca _Epson_. No obstante, en la visita se dispuso únicamente de un robot de 6 ejes de la serie _VT_.
