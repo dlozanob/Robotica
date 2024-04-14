@@ -104,4 +104,96 @@ _Procedimiento:_
 
 ## Implementación de ROS con Python
 
+Software requerido:
+- Python 3.8.10
+- rospy
+- numpy
 
+_Objetivo:_ Modificar la pose de la tortuga con el teclado.
+
+La configuración de teclas es la siguiente:
+- `W` : Mover tortuga hacia adelante
+- `A` : Mover tortuga hacia su izquierda
+- `S` : Mover tortuga hacia atrás
+- `D` : Mover tortuga hacia su derecha
+- `R` : Retornar tortuga a su pose incial por defeto
+- `SPACE` : Rotar la tortuga $180°$
+
+Adicionalmente se implementaron las siguientes funciones:
+- `Q` : Girar tortuga en sentido antihorario
+- `E` : Girar tortuga en sentido horario
+- `M` : Aumentar la velocidad de la tortuga
+- `N` : Reducir la velocidad de la tortuga
+- `Z` : Terminar el proceso
+
+---
+
+### Reconocimiento de eventos
+
+El programa se ejecuta en un bucle donde las primeras tareas es el reconocimiento de los eventos de teclado. La tecla presionada determina la función a ejecutar.
+
+El reconocimiento de eventos se realiza mediante la función:
+
+```Python
+def getKey():
+    fd = sys.stdin.fileno()
+    old = termios.tcgetattr(fd)
+    new = termios.tcgetattr(fd)
+    new[3] = new[3] & ~TERMIOS.ICANON & ~TERMIOS.ECHO
+    new[6][TERMIOS.VMIN] = 1
+    new[6][TERMIOS.VTIME] = 0
+    termios.tcsetattr(fd, TERMIOS.TCSANOW, new)
+    c = None
+    try:
+        c = os.read(fd, 1)
+    finally:
+        termios.tcsetattr(fd, TERMIOS.TCSAFLUSH, old)
+    c = str(c)[2]
+    return c
+```
+
+La cual utiliza la librería `sys` que viene por defecto en la versión de _Python_ instalada. Esta librería de bajo nivel permite reconocer los eventos de teclado, en la función se traducen estos eventos a un caracter.
+
+### Actualización de Pose
+
+Tras reconocer la tecla presionada, se actualiza la pose de la tortuga de acuerdo a la función correspondiente.
+
+```Python
+def updateState(x, y, th, status):
+    vel_msg.linear.x = x
+    vel_msg.linear.y = y
+    vel_msg.angular.z = th
+    vel_pub.publish(vel_msg)
+    if(status == 1):
+        tp_abs(initPose[0], initPose[1], 0)
+    elif(status == -1):
+        tp_rel(0, np.pi)
+```
+
+>[!Note]
+>La variable `status` determina el uso de los servicios `tp_abs` y `tp_rel` los cuales son utilizados para reiniciar pose de la tortuga y rotarla $180°$ respectivamente
+
+
+### Comunicación con ROS
+
+1. _Python_ debe poseer un nodo propio que le permita recibir y emitir datos a los otros nodos. Se inicializa el nodo que cumple con este propósito: `rospy.init_node('jog_node')`
+
+2. Se crea una publicación al tópico `turtle1/cmd_vel` encargado de modificar la velocidad de la tortuga por un periodo corto de tiempo: `vel_pub = rospy.Publisher('turtle1/cmd_vel', Twist, queue_size=10)`
+
+3. Se genera un mensaje de tipo `geometry_msgs/Twist` : `vel_msg = Twist()`
+
+4. Se genera un cliente para el servicio `turtle1/teleport_absolute` : `tp_abs = rospy.ServiceProxy('turtle1/teleport_absolute', TeleportAbsolute)`
+
+5. Se genera un cliente para el servicio `turtle1/teleport_relative` : `tp_rel = rospy.ServiceProxy('turtle1/teleport_relative', TeleportRelative)`
+
+Por medio del publicador generado se emiten los mensajes que llegan al nodo `turtlesim` el cual al recibir esta información modifica la velocidad de la tortuga con los argumentos: `X`, `Y`, `Theta`. Esto genera el movimiento deseado de la tortuga.
+
+>[!Note]
+>Percatarse que el envío de mensajes por el tópico `turle1/cmd_vel` fue implementado también en Matlab ([Procedimiento en Matlab](#Primera+parte))
+
+Los servicios `teleport_absolute` y `teleport_relative` hacen posible modificar la pose de la tortuga de manera global y relativa respectivamente. De esta manera pueden implementarse las funciones asignadas para las teclas: `R` y `SPACE`.
+
+>[!Note]
+>La tortuga posee su propio sistema de coordenadas. El tópico `turtle1/vel` modifica la velocidad de la tortuga en su propio sistema de referencia
+
+Para más información sobre el algoritmo: [Código](https://github.com/dlozanob/Robotica/blob/main/Laboratorio%203/Programas/myTeleopKey.py)
