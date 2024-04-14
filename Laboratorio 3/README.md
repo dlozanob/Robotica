@@ -111,7 +111,7 @@ Software requerido:
 
 _Objetivo:_ Modificar la pose de la tortuga con el teclado.
 
-La configuración de teclas es la siguiente:
+La configuración de las teclas es la siguiente:
 - `W` : Mover tortuga hacia adelante
 - `A` : Mover tortuga hacia su izquierda
 - `S` : Mover tortuga hacia atrás
@@ -196,4 +196,23 @@ Los servicios `teleport_absolute` y `teleport_relative` hacen posible modificar 
 >[!Note]
 >La tortuga posee su propio sistema de coordenadas. El tópico `turtle1/vel` modifica la velocidad de la tortuga en su propio sistema de referencia
 
+>[!Note]
+>Al cambiar el sentido de la tortuga con la tecla `SPACE`, es necesario cambiar el sentido de la velocidad para que las teclas de movimiento satisfagan su función como se describió en: [Configuración de las teclas](#Implementación+de+ROS+con+Python)
+
+### Funciones adicionales
+
+Al detectar las teclas: `Q` o `E`, la tortuga rota en sentido antihorario u horario respectivamente. Por lo que se modifica el argumento `Theta` que se envía por el tópico `turtle1/cmd_vel`.
+
+>[!Note]
+>Rotar la tortuga $180°$ usando estas funciones no hará que su frente sea el mismo por el que se desplaza hacia adelante. Esto no se implementó
+
+Las teclas `M` y `N` aumentan y reducen la velocidad de la tortuga respectivamente, al modificar la variable de velocidad `vf` que comienza siendo $1$.
+- Límite de velocidad mínimo: $\mid1\mid$
+- Límite de velocidad máximo: $\mid50\mid$
+
+>[!Note]
+>Se usó una aceleración de $2$
+
 Para más información sobre el algoritmo: [Código](https://github.com/dlozanob/Robotica/blob/main/Laboratorio%203/Programas/myTeleopKey.py)
+
+
