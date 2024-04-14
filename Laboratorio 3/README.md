@@ -91,7 +91,15 @@ De este modo se verifican los argumentos del mensaje:
 
 ![[Pasted image 20240414174649.png]]
 
+### Parte cuatro
 
+Apagar el nodo principal.
+
+_Procedimiento:_
+1. Apagar el nodo principal: `rosshutdown`
+
+>[!Note]
+>El nodo global `matlab_global_node_47801` se desactiva
 
 
 ## Implementación de ROS con Python
