@@ -7,5 +7,14 @@
       ],
       "key": "S"
     }
+  ],
+  "consistent-attachments-and-links:reorganize-vault": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "R"
+    }
   ]
 }

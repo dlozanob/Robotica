@@ -35,22 +35,22 @@ _Procedimiento:_
 
 Se puede verificar la creación del tópico mediante: `rosnode info matlabglobal_node_47801` :
 
-![[Pasted image 20240414172515.png]]
+![](Imagenes/Pasted%20image%2020240414172515.png)
 
 El tipo de mensaje asignado posee los siguientes parámetros:
 
-![[Pasted image 20240414172917.png]]
+![](Imagenes/Pasted%20image%2020240414172917.png)
 
 Por tanto, los otros parámetros también pudieron haber sido modificados en caso de necesitarlo.
 
 Ahora bien, este es un mensaje que modifica la velocidad de la tortuga con el nodo `turtlesim`, el cual modifica la cinemática de la tortuga en la GUI provista por el paquete `hello_turtle`.
 Por tanto, el nodo debe estar suscrito al tópico `turtle1/cmd_vel` para poder recibir el mensaje. No obstante, ya lo está.
 
-![[Pasted image 20240414173318.png]]
+![](Imagenes/Pasted%20image%2020240414173318.png)
 
 El mensaje es recibido correctamente y se puede observar en la GUI el movimiento de la tortuga.
 
-![[Pasted image 20240414173405.png]]
+![](Imagenes/Pasted%20image%2020240414173405.png)
 
 ### Segunda parte
 
@@ -75,7 +75,7 @@ request_msg.Theta = 45;
 ```
 4. Breve Visualización del mensaje enviado: `request_msg.showdetails;`
 
-![[Pasted image 20240414174908.png]]
+![](Imagenes/Pasted%20image%2020240414174908.png)
 
 5. Emitir el mensaje por el canal del cliente del servicio utilizado: `response = call(turtle_client, request_msg, 'Timeout', 3);`
 
@@ -89,7 +89,7 @@ request_msg.Theta = 45;
 
 De este modo se verifican los argumentos del mensaje:
 
-![[Pasted image 20240414174649.png]]
+![](Imagenes/Pasted%20image%2020240414174649.png)
 
 ### Parte cuatro
 
