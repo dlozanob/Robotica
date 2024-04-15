@@ -223,6 +223,5 @@ Las teclas `M` y `N` aumentan y reducen la velocidad de la tortuga respectivamen
 
 Al presionar la tecla `Z` se termina de ejecutar el programa.
 
-![[Pasted image 20240414192212.png]]
 
 Para más información sobre el algoritmo: [Código](https://github.com/dlozanob/Robotica/blob/main/Laboratorio%203/Programas/myTeleopKey.py)
