@@ -108,6 +108,8 @@ _Procedimiento:_
 
 [Código](https://github.com/dlozanob/Robotica/blob/main/Laboratorio%203/Programas/myTeleopKey.py)
 
+[Video de su implementación](https://youtu.be/MVhyVaZZ8w4)
+
 Software requerido:
 - Python 3.8.10
 - rospy
@@ -217,6 +219,8 @@ Las teclas `M` y `N` aumentan y reducen la velocidad de la tortuga respectivamen
 >[!Note]
 >Se usó una aceleración de $2$
 
+Al presionar la tecla `Z` se termina de ejecutar el programa.
+
+![[Pasted image 20240414192212.png]]
+
 Para más información sobre el algoritmo: [Código](https://github.com/dlozanob/Robotica/blob/main/Laboratorio%203/Programas/myTeleopKey.py)
-
-
