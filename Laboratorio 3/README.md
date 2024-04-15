@@ -8,7 +8,7 @@
 ## Introducción
 Conocer el manejo del entorno ROS es de gran importancia y utilidad para el desarrollo de diversos proyectos en la robótica de desarrollo, ya que permite procesar y manipular diversa información proveniente de sensores, control, actuadores y estados. En este laboratorio se presenta el desarrollo de un primer acercamiento al entorno de ROS desde Linux y una posterior comunicación entre ROS y Matlab realizando la simulacipon en turtleSim.
 
-Es importante recalcar que la forma de instalación del sistema operativo Linux fue desarrollada teniendo en cuenta las instrucciones del repositorio dado como guía, junto el uso de una máquina virtual generada por el software VirtualBox.
+Es importante recalcar que la forma de instalación del sistema operativo Linux fue desarrollada teniendo en cuenta las instrucciones del repositorio [Intro_Ros](https://github.com/PedroFCardenas/Intro_Ros.git) dado como guía, complementado con el uso de una máquina virtual generada por el software VirtualBox.
 
 ## Implementación de ROS con Matlab
 
