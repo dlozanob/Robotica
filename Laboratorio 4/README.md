@@ -1,4 +1,4 @@
-# Laboratorio 3
+# Laboratorio 4
 
 ## Integrantes:
 
@@ -6,9 +6,9 @@
 - Daniel Lozano Barrero
 
 ## Introducción
-Conocer el manejo del entorno ROS es de gran importancia y utilidad para el desarrollo de diversos proyectos en la robótica de desarrollo, ya que permite procesar y manipular diversa información proveniente de sensores, control, actuadores y estados. En este laboratorio se presenta el desarrollo de un primer acercamiento al entorno de ROS desde Linux y una posterior comunicación entre ROS y Matlab realizando la simulacipon en turtleSim.
+Habiendo realizado el acercamiento a las herramientas de ROS en Linux, su integración con Python y la ejecución de instrucciones utilizando Matlab y TurtleSim en la práctica anterior, se dispone aplicar estos conocimientos para permitir manipular y programar cinco posiciones deferentes de un robot Phantom X Pincher, junto con una interfaz de usuario que permita seleccionar la pose deseada y visibilizar la posición actual del robot mediante el uso del Robotic Toolbox de Peter Corke. 
 
-Es importante recalcar que la forma de instalación del sistema operativo Linux fue desarrollada teniendo en cuenta las instrucciones del repositorio [Intro_Ros](https://github.com/PedroFCardenas/Intro_Ros.git) dado como guía, complementado con el uso de una máquina virtual generada por el software VirtualBox.
+Este laboratorio se desarrolló en una configuración de Linux nativa corriendo mediante Ubuntu y utilizando herramientas adicionales tales como Catkin, el software Dynamixel y Visual Studio Code.
 
 ## Implementación de ROS con Matlab
 
