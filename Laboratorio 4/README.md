@@ -26,7 +26,7 @@ Las medidas obtenidas son:
 
 La última longitud es la longitud desde la articulación 4 hasta la mitad del _gripper_, que es donde se encuentra el origen del _TCP_.
 
-![Uploading image.png…]()
+![image](https://github.com/dlozanob/Robotica/assets/69172002/e489ed52-3a74-427a-81b0-011714083f32)
 
 ### Cinemática directa
 
