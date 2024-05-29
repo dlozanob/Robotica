@@ -70,6 +70,9 @@ En el caso de la función del Push Button, se estableció que recuperara la info
 
 ![](Imagenes/push.png)
 
+A continuación se muestra la interfaz realizada:
+
+![](Imagenes/interfaz.png)
 
 ### Comunicación Matlab-Python
 Debido a que se quería realizar la ejecución de ROS desde Matlab y que por esto el comando _rosinit_ entraba en conflicto con el comando _roslaunch_ al cada uno intentar ejecutar un nodo maestro, se optó por realizar únicamente desde Matlab la configuración de la cadena cinemática, la interfaz de usuario y la selección de pose del usuario, para finalmente exportar los ángulos deseados a un archivo de texto que posteriormente abre y lee Python con el fin de adaptarlos y enviarlos para su posterior ejecución en ROS:
