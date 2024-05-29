@@ -33,6 +33,49 @@ Estos parámetros fueron utilizados para configurar los eslabones y la cadena al
 
 ### Usando tópicos
 
+Se utiliza un script de Python, el cual utiliza el tópico `/joint_trajectory`.
+
+El nodo `/dynamixel_workbench`se encuentra suscrito a este. 
+
+![image](https://github.com/dlozanob/Robotica/assets/69172002/f8af987c-ba48-495d-8145-b2ceb03be80f)
+
+Por tanto, se crea en python un nodo publicador que envía la información al tópico. Mientras que `/dynamixel_workbench` se encarga de enviar publicar estos datos a `/rosout`, el cual haciendo uso del paquete de dynamixel, hace que los motores se muevan de acuerdo a los datos enviados.
+
+
+A continuación, se crea el nodo publicador, el cual publica al tópico anteriormente mencionado.
+
+```python
+pub = rospy.Publisher('/joint_trajectory', JointTrajectory, queue_size = 0)
+rospy.init_node('joint_publisher', anonymous = False)
+```
+
+Notar que el argumento `JointTrajectory` es el tipo de mensaje que posee el tópico.
+
+![image](https://github.com/dlozanob/Robotica/assets/69172002/684cfbda-4d84-4dc1-a8d0-bfd35bff6f21)
+
+Este tipo de mensaje posee los siguientes campos:
+
+![image](https://github.com/dlozanob/Robotica/assets/69172002/9f680ac9-d16a-4f21-be90-ce95886b7cfd)
+
+El campo `positions` es donde se asignan los valores de las articulaciones.
+
+
+La siguiente función envía los datos al tópico:
+
+```python
+def publish_msg(q1, q2, q3, q4, q5):
+    state = JointTrajectory()
+    state.header.stamp = rospy.Time.now()
+    state.joint_names = ["joint_1", "joint_2", "joint_3", "joint_4", "joint_5"]
+    point = JointTrajectoryPoint()
+    point.positions = [q1, q2, q3, q4, q5]
+    point.time_from_start = rospy.Duration(0.5)
+    state.points.append(point)
+    pub.publish(state)
+    print('State published successfully')
+```
+
+
 ### Usando servicios
 
 Suscripción del nodo global al tópico `turtle1/pos` publicado por el nodo `turtlesim` y obtener el último mensaje emitido por este tópico.
@@ -40,6 +83,68 @@ Suscripción del nodo global al tópico `turtle1/pos` publicado por el nodo `tur
 _Procedimiento:_
 1. Suscribir el nodo global al tópico: `posSus = rossubscriber('/turtle1/pose');`
 2. Se genera una variable que contiene el último mensaje emitido por este tópico: `LM = posSus.LatestMessage;`
+
+Se utiliza el servicio `dynamixel_workbench_msgs/DynamixelCommand`.
+
+![image](https://github.com/dlozanob/Robotica/assets/69172002/0f2016ef-0b11-41be-a0d3-72488367347f)
+
+- id : Número de id del motor a accionar
+
+- command : ' ' por defecto
+
+- addr_name : 
+
+  - 'Goal_Position' : Comando de movimiento
+
+  - 'Torque_Limit' : Estabecer límite de torque
+
+- value : Valor de posición del actuador
+
+  
+
+Función de envío de datos por el servicio:
+
+```python
+def jointCommand(command, id_num, addr_name, value, time):
+    rospy.wait_for_service('dynamixel_workbench/dynamixel_command')
+    try:
+        dynamixel_command = rospy.ServiceProxy(
+            '/dynamixel_workbench/dynamixel_command', DynamixelCommand)
+        result = dynamixel_command(command,id_num,addr_name,value)
+        #rate.sleep()
+        rospy.sleep(time)
+        return result.comm_result
+    except rospy.ServiceException as exc:
+        print(str(exc))
+```
+
+
+
+Se crearon las siguientes funciones para automatizar el proceso:
+
+
+
+```python
+def setTorqueLimits(tl):
+    for i in range(len(tl)):
+        jointCommand('', i + 1, 'Torque_Limit', tl[i], 0)
+
+def setPose(q, takt):
+    for i in range(len(q)):
+        jointCommand('', i + 1, 'Goal_Position', q[i], takt)
+```
+
+
+
+Poses y límites de torque:
+
+```python
+        torqueLimits = [600, 500, 400, 400, 300]
+        p1 = [0, 398, 850, 426, 1021]
+        p2 = [206, 684, 746, 742, 400]
+```
+
+
 
 ## Configuración en las cinco poses deseadas
 
