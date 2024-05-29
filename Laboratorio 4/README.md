@@ -71,42 +71,12 @@ En el caso de la función del Push Button, se estableció que recuperara la info
 ![](Imagenes/push.png)
 
 
-_Procedimiento:_
-1. Apagar el nodo principal: `rosshutdown`
-
->[!Note]
->El nodo global `matlab_global_node_47801` se desactiva
-
-
 ### Comunicación Matlab-Python
+Debido a que se quería realizar la ejecución de ROS desde Matlab y que por esto el comando _rosinit_ entraba en conflicto con el comando _roslaunch_ al cada uno intentar ejecutar un nodo maestro, se optó por realizar únicamente desde Matlab la configuración de la cadena cinemática, la interfaz de usuario y la selección de pose del usuario, para finalmente exportar los ángulos deseados a un archivo de texto que posteriormente abre y lee Python con el fin de adaptarlos y enviarlos para su posterior ejecución en ROS:
 
-[Código](https://github.com/dlozanob/Robotica/blob/main/Laboratorio%203/Programas/myTeleopKey.py)
+  
 
-[Video de su implementación](https://youtu.be/MVhyVaZZ8w4)
 
-Software requerido:
-- Python 3.8.10
-- rospy
-- numpy
-
-_Objetivo:_ Modificar la pose de la tortuga con el teclado.
-
-La configuración de las teclas es la siguiente:
-- `W` : Mover tortuga hacia adelante
-- `A` : Mover tortuga hacia su izquierda
-- `S` : Mover tortuga hacia atrás
-- `D` : Mover tortuga hacia su derecha
-- `R` : Retornar tortuga a su pose incial por defeto
-- `SPACE` : Rotar la tortuga $180°$
-
-Adicionalmente se implementaron las siguientes funciones:
-- `Q` : Girar tortuga en sentido antihorario
-- `E` : Girar tortuga en sentido horario
-- `M` : Aumentar la velocidad de la tortuga
-- `N` : Reducir la velocidad de la tortuga
-- `Z` : Terminar el proceso
-
----
 
 ### Comunicación Python-Ros
 
