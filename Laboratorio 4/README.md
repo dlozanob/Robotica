@@ -10,36 +10,13 @@ Habiendo realizado el acercamiento a las herramientas de ROS en Linux, su integr
 
 Este laboratorio se desarrolló en una configuración de Linux nativa corriendo mediante Ubuntu y utilizando herramientas adicionales tales como Catkin, el software Dynamixel y Visual Studio Code.
 
-## Implementación de ROS con Matlab
+## Mediciones y cinemática directa
 
-[Livescript de Matlab](https://github.com/dlozanob/Robotica/blob/main/Laboratorio%203/Programas/lab3.mlx)
+### Cinemática directa
 
-Paquete requerido:
-- ROS Toolbox
+Se desarrolló la cinemática directa del robot, teniendo en cuanta el siguiente diagrama:
 
-### Primera parte
-
-Creación de un tópico `turtle1/cmd_vel` de tipo `turtlesim/Pos` en el nodo principal.
-Se crea un mensaje y se modifican sus parámetros, se envía el mensaje por medio del tópico creado anteriormente.
-
->[!Note]
->El nodo _turtlesim_ ya está suscrito por defecto al tópico `turtle1_cmd_vel`
-
->[!Note]
->El nodo principal iniciado por `rosint` para el toolbox de Matlab es `matlab_global_node_47801`
-
-_Procedimiento:_
-1. Se inicializa el nodo maestro: `rosinit`
-2. Creación del tópico: `velPub = rospublisher('/turtle1/cmd_vel', 'geometry_msgs/Twist');`
-3. Creación del mensaje: `velMsg = rosmessage(velPub);`
-4. Se modifica uno de los parámetros del mensaje: `velMsg.Linear.X = 1;`
-5. Se envía el mensaje por medio del tópico creado: `send(velPub,velMsg);`
-
----
-
-Se puede verificar la creación del tópico mediante: `rosnode info matlabglobal_node_47801` :
-
-![](Imagenes/Pasted%20image%2020240414172515.png)
+![](Imagenes/esquemarobot.png)
 
 El tipo de mensaje asignado posee los siguientes parámetros:
 
