@@ -29,7 +29,11 @@ Posteriormente se encontraron los parámetros que describen la cinemática direc
 Estos parámetros fueron utilizados para configurar los eslabones y la cadena al graficar la simulación del robot en Matlab usando el toolbox de Peter Corke.
 
 
-## Manipulación cíclica del Robot
+## Implementación básica entre dos poses
+
+### Usando tópicos
+
+### Usando servicios
 
 Suscripción del nodo global al tópico `turtle1/pos` publicado por el nodo `turtlesim` y obtener el último mensaje emitido por este tópico.
 
@@ -39,38 +43,33 @@ _Procedimiento:_
 
 ## Configuración en las cinco poses deseadas
 
-Se quiere modificar la pose de la tortuga desde el nodo global. Se puede utilizar el servicio `turtle1/teleport_absolute` emitido por el nodo `turtlesim`, el cual permite establecer las coordenadas absolutas de la tortuga dentro de la ventana gráfica.
-
-_Procedimiento:_
-1. Se crea un cliente a este servicio en el nodo global: `turtle_client = rossvcclient('/turtle1/teleport_absolute');`
-2. Se genera un mensaje por el lado del cliente: `request_msg = rosmessage(turtle_client);` 
-3. Se modifican los argumentos que contiene el mensaje:
-``` Matlab
-request_msg.X = 5;
-request_msg.Y = 5;
-request_msg.Theta = 45;
-```
-4. Breve Visualización del mensaje enviado: `request_msg.showdetails;`
-
-![](Imagenes/Pasted%20image%2020240414174908.png)
-
-5. Emitir el mensaje por el canal del cliente del servicio utilizado: `response = call(turtle_client, request_msg, 'Timeout', 3);`
-
----
-
->[!Note]
->El tipo de mensaje (argumentos que contiene) se define al vincularlo con el cliente, el cual utiliza un servicio que contiene mensajes de cierto tipo determinado
-
->[!Note]
->El parámetro `'Timeout'` en la función `call()` determina el número de segundos que espera el proceso a la confirmación del envío del mensaje. Si este parámetro es $-1$, el proceso esperará hasta que el nodo se desactive ([ROS Services](https://docs.ros.org/en/diamondback/api/roscpp/html/namespaceros_1_1service.html))
-
-De este modo se verifican los argumentos del mensaje:
+En esta sección se describe el procedimiento realizado para poder configurar cinco poses predeterminadas del robot, poder variar entre cada una de ellas mediante un menú de selección, visualizar en simulación la pose deseada y finalmente enviar la pose seleccionada al ejecutable en Python comunicado con ROS.
 
 ![](Imagenes/Pasted%20image%2020240414174649.png)
 
 ### Interfaz de usuario en Matlab
 
-Apagar el nodo principal.
+La interfaz de usuario fue desarrollada utilizando la herramienta Guide de Matlab, la cual permite configurar una GUI con elementos propios de Matlab tales como botones, menús desplegables, imágenes, gráficas, entre otros elementos.
+Para desarrollarla fue necesario primero ejecutar el comando _Guide_ en la ventana de comandos, al hacer esto se abrirá la siguiente ventana:
+
+![](Imagenes/gui.png)
+
+Se dispusieron los siguientes elementos, cada uno configurado con un nombre o _Tag_, el cual permite referenciar el elemento en el código de Matlab mediante una función o un llamado determinado. Dentro de cada una de estas funciones se ejecutan ciertos comandos o instrucciones que se desean vincular con cada uno de los elementos de la interfaz.
+
+![](Imagenes/estructura.png)
+
+Para cada elemento dispuesto en la interfaz se debe usar el prefijo _handles_, el cual permite identificar que se trata de un elemento de la interfaz. Por ejemplo, para cargar el logo se usó:
+
+![](Imagenes/logo.png)
+
+Posteriormente la función referente al menú desplegable fue configurada para que cuando se seleccionara una de las poses dispuestas en un vector, se almacenara el índice de la pose deseada en la variable _SelectedPose_. Es importante aclarar que las variables inicialmente son locales, por lo que si se requiere que un valor obtenido dentro de una función de un elemento de la interfaz pueda usarse de manera global, es necesario llamar la función _guidata_.
+
+![](Imagenes/popupmenu.png)
+
+En el caso de la función del Push Button, se estableció que recuperara la información de _guidata_ para almacenarla su valor. En esta función de igual forma se realizó la definición de la cadena cinemática con el fin de que solo se actualizara la gráfica de la pose de la interfaz hasta que se pulsara el botón _Enviar_. Finalmente dentro de esta función también se guardaba la pose seleccionada en un archivo_.txt_ para su posterior lectura en Python:
+
+![](Imagenes/push.png)
+
 
 _Procedimiento:_
 1. Apagar el nodo principal: `rosshutdown`
@@ -111,9 +110,7 @@ Adicionalmente se implementaron las siguientes funciones:
 
 ### Comunicación Python-Ros
 
-El programa se ejecuta en un bucle donde las primeras tareas es el reconocimiento de los eventos de teclado. La tecla presionada determina la función a ejecutar.
 
-El reconocimiento de eventos se realiza mediante la función:
 
 ```Python
 def getKey():
