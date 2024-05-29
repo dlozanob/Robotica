@@ -12,7 +12,7 @@ Habiendo realizado el acercamiento a las herramientas de ROS en Linux, su integr
 
 Este laboratorio se desarrolló en una configuración de Linux nativa corriendo mediante Ubuntu y utilizando herramientas adicionales tales como Catkin, el software Dynamixel y Visual Studio Code.
 
-![image](https://github.com/dlozanob/Robotica/assets/69172002/4ef7be4c-4ae9-473b-9c7f-2dc56df418ab)
+![image](https://github.com/dlozanob/Robotica/assets/69172002/8811070d-afc6-4774-92c7-662a81c8710b)
 
 
 ## Mediciones y cinemática directa
