@@ -53,7 +53,7 @@ Estos parámetros fueron utilizados para configurar los eslabones y la cadena al
 
 Sin embargo, por simplicidad, decidimos definir el robot en su posición cero inicial como se muestra a continuación:
 
-![image](https://github.com/dlozanob/Robotica/assets/69172002/21dbe128-ba19-40c7-8603-f0c3fd5dbef9)
+![image](https://github.com/dlozanob/Robotica/assets/69172002/6475807e-1c33-4bee-aa10-f37a861d2867)
 
 Se hallaron los parámetros DH para esta posición:
 
