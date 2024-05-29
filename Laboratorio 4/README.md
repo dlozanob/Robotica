@@ -17,6 +17,8 @@ Este laboratorio se desarrolló en una configuración de Linux nativa corriendo 
 
 Se hizo el respectivo levantamiento metrológico de los eslabones del robot, teniendo en cuenta que la longitud de cada eslabón es la mínima distancia entre articulaciones. 
 
+![image](https://github.com/dlozanob/Robotica/assets/69172002/e489ed52-3a74-427a-81b0-011714083f32)
+
 Las medidas obtenidas son:
 
 - $L_1 = 14.1$ cm
@@ -25,8 +27,6 @@ Las medidas obtenidas son:
 - $L_4 = 9.1$ cm
 
 La última longitud es la longitud desde la articulación 4 hasta la mitad del _gripper_, que es donde se encuentra el origen del _TCP_.
-
-![image](https://github.com/dlozanob/Robotica/assets/69172002/e489ed52-3a74-427a-81b0-011714083f32)
 
 ### Cinemática directa
 
