@@ -14,6 +14,19 @@ Este laboratorio se desarrolló en una configuración de Linux nativa corriendo 
 
 ## Mediciones y cinemática directa
 ### Mediciones
+
+Se hizo el respectivo levantamiento metrológico de los eslabones del robot, teniendo en cuenta que la longitud de cada eslabón es la mínima distancia entre articulaciones. 
+
+Las medidas obtenidas son:
+
+- $L_1 = 14.1$ cm
+- $L_2 = 10.5$ cm
+- $L_3 = 10.55$ cm
+- $L_4 = 9.1$ cm
+
+La última longitud es la longitud desde la articulación 4 hasta la mitad del _gripper_, que es donde se encuentra el origen del _TCP_.
+
+
 ### Cinemática directa
 
 Se desarrolló la cinemática directa del robot, teniendo en cuanta el siguiente diagrama:
