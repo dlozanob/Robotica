@@ -18,11 +18,13 @@ Se desarrolló la cinemática directa del robot, teniendo en cuanta el siguiente
 
 ![](Imagenes/esquemarobot.png)
 
-El tipo de mensaje asignado posee los siguientes parámetros:
+En donde luego de medir sus eslabones y realizar el análisis cinemático, se pudo obtener la siguiente matriz de transformación homogénea que describe la posición del efector final respecto a su base:
 
-![](Imagenes/Pasted%20image%2020240414172917.png)
+![](Imagenes/MTH.png)
 
-Por tanto, los otros parámetros también pudieron haber sido modificados en caso de necesitarlo.
+Posteriormente se encontraron los parámetros que describen la cinemática directa del motor, siendo estos:
+
+![](Imagenes/parametros.png)
 
 Ahora bien, este es un mensaje que modifica la velocidad de la tortuga con el nodo `turtlesim`, el cual modifica la cinemática de la tortuga en la GUI provista por el paquete `hello_turtle`.
 Por tanto, el nodo debe estar suscrito al tópico `turtle1/cmd_vel` para poder recibir el mensaje. No obstante, ya lo está.
