@@ -33,6 +33,8 @@ Se desarrolló la cinemática directa del robot, teniendo en cuanta el siguiente
 
 ![](Imagenes/esquemarobot.png)
 
+![image](https://github.com/dlozanob/Robotica/assets/69172002/04192852-a26f-4b9d-99cb-ca755750e081)
+
 En donde luego de medir sus eslabones y realizar el análisis cinemático, se pudo obtener la siguiente matriz de transformación homogénea que describe la posición del efector final respecto a su base:
 
 ![](Imagenes/MTH.png)
@@ -42,6 +44,10 @@ Posteriormente se encontraron los parámetros que describen la cinemática direc
 ![](Imagenes/parametros.png)
 
 Estos parámetros fueron utilizados para configurar los eslabones y la cadena al graficar la simulación del robot en Matlab usando el toolbox de Peter Corke.
+
+A continuación, se muestran los parámetros de Denavit-Hartenberg hallados para esta configuración:
+
+![image](https://github.com/dlozanob/Robotica/assets/69172002/7801efc4-d633-48eb-86d3-9b0465192094)
 
 
 ## Implementación básica entre dos poses
