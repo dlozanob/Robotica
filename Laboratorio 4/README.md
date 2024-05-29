@@ -5,7 +5,7 @@
 - Oscar Julian Olivos Aguirre
 - Daniel Lozano Barrero
 
-Link del video: [Video](https://youtu.be/pJycmdnFGBk)
+- Implementación: [Video](https://youtu.be/pJycmdnFGBk)
 
 ## Introducción
 Habiendo realizado el acercamiento a las herramientas de ROS en Linux, su integración con Python y la ejecución de instrucciones utilizando Matlab y TurtleSim en la práctica anterior, se dispone aplicar estos conocimientos para permitir manipular y programar cinco posiciones deferentes de un robot Phantom X Pincher, junto con una interfaz de usuario que permita seleccionar la pose deseada y visibilizar la posición actual del robot mediante el uso del Robotic Toolbox de Peter Corke. 
