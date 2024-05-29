@@ -11,7 +11,7 @@ Habiendo realizado el acercamiento a las herramientas de ROS en Linux, su integr
 Este laboratorio se desarrolló en una configuración de Linux nativa corriendo mediante Ubuntu y utilizando herramientas adicionales tales como Catkin, el software Dynamixel y Visual Studio Code.
 
 ## Mediciones y cinemática directa
-
+### Mediciones
 ### Cinemática directa
 
 Se desarrolló la cinemática directa del robot, teniendo en cuanta el siguiente diagrama:
@@ -26,16 +26,10 @@ Posteriormente se encontraron los parámetros que describen la cinemática direc
 
 ![](Imagenes/parametros.png)
 
-Ahora bien, este es un mensaje que modifica la velocidad de la tortuga con el nodo `turtlesim`, el cual modifica la cinemática de la tortuga en la GUI provista por el paquete `hello_turtle`.
-Por tanto, el nodo debe estar suscrito al tópico `turtle1/cmd_vel` para poder recibir el mensaje. No obstante, ya lo está.
+Estos parámetros fueron utilizados para configurar los eslabones y la cadena al graficar la simulación del robot en Matlab usando el toolbox de Peter Corke.
 
-![](Imagenes/Pasted%20image%2020240414173318.png)
 
-El mensaje es recibido correctamente y se puede observar en la GUI el movimiento de la tortuga.
-
-![](Imagenes/Pasted%20image%2020240414173405.png)
-
-### Segunda parte
+## Manipulación cíclica del Robot
 
 Suscripción del nodo global al tópico `turtle1/pos` publicado por el nodo `turtlesim` y obtener el último mensaje emitido por este tópico.
 
@@ -43,7 +37,7 @@ _Procedimiento:_
 1. Suscribir el nodo global al tópico: `posSus = rossubscriber('/turtle1/pose');`
 2. Se genera una variable que contiene el último mensaje emitido por este tópico: `LM = posSus.LatestMessage;`
 
-### Tercera parte
+## Configuración en las cinco poses deseadas
 
 Se quiere modificar la pose de la tortuga desde el nodo global. Se puede utilizar el servicio `turtle1/teleport_absolute` emitido por el nodo `turtlesim`, el cual permite establecer las coordenadas absolutas de la tortuga dentro de la ventana gráfica.
 
@@ -74,7 +68,7 @@ De este modo se verifican los argumentos del mensaje:
 
 ![](Imagenes/Pasted%20image%2020240414174649.png)
 
-### Parte cuatro
+### Interfaz de usuario en Matlab
 
 Apagar el nodo principal.
 
@@ -85,7 +79,7 @@ _Procedimiento:_
 >El nodo global `matlab_global_node_47801` se desactiva
 
 
-## Implementación de ROS con Python
+### Comunicación Matlab-Python
 
 [Código](https://github.com/dlozanob/Robotica/blob/main/Laboratorio%203/Programas/myTeleopKey.py)
 
@@ -115,7 +109,7 @@ Adicionalmente se implementaron las siguientes funciones:
 
 ---
 
-### Reconocimiento de eventos
+### Comunicación Python-Ros
 
 El programa se ejecuta en un bucle donde las primeras tareas es el reconocimiento de los eventos de teclado. La tecla presionada determina la función a ejecutar.
 
@@ -141,66 +135,7 @@ def getKey():
 
 La cual utiliza la librería `sys` que viene por defecto en la versión de _Python_ instalada. Esta librería de bajo nivel permite reconocer los eventos de teclado, en la función se traducen estos eventos a un caracter.
 
-### Actualización de Pose
 
-Tras reconocer la tecla presionada, se actualiza la pose de la tortuga de acuerdo a la función correspondiente.
-
-```Python
-def updateState(x, y, th, status):
-    vel_msg.linear.x = x
-    vel_msg.linear.y = y
-    vel_msg.angular.z = th
-    vel_pub.publish(vel_msg)
-    if(status == 1):
-        tp_abs(initPose[0], initPose[1], 0)
-    elif(status == -1):
-        tp_rel(0, np.pi)
-```
-
->[!Note]
->La variable `status` determina el uso de los servicios `tp_abs` y `tp_rel` los cuales son utilizados para reiniciar pose de la tortuga y rotarla $180°$ respectivamente
-
-
-### Comunicación con ROS
-
-1. _Python_ debe poseer un nodo propio que le permita recibir y emitir datos a los otros nodos. Se inicializa el nodo que cumple con este propósito: `rospy.init_node('jog_node')`
-
-2. Se crea una publicación al tópico `turtle1/cmd_vel` encargado de modificar la velocidad de la tortuga por un periodo corto de tiempo: `vel_pub = rospy.Publisher('turtle1/cmd_vel', Twist, queue_size=10)`
-
-3. Se genera un mensaje de tipo `geometry_msgs/Twist` : `vel_msg = Twist()`
-
-4. Se genera un cliente para el servicio `turtle1/teleport_absolute` : `tp_abs = rospy.ServiceProxy('turtle1/teleport_absolute', TeleportAbsolute)`
-
-5. Se genera un cliente para el servicio `turtle1/teleport_relative` : `tp_rel = rospy.ServiceProxy('turtle1/teleport_relative', TeleportRelative)`
-
-Por medio del publicador generado se emiten los mensajes que llegan al nodo `turtlesim` el cual al recibir esta información modifica la velocidad de la tortuga con los argumentos: `X`, `Y`, `Theta`. Esto genera el movimiento deseado de la tortuga.
-
->[!Note]
->Percatarse que el envío de mensajes por el tópico `turle1/cmd_vel` fue implementado también en Matlab ([Procedimiento en Matlab](#Primera+parte))
-
-Los servicios `teleport_absolute` y `teleport_relative` hacen posible modificar la pose de la tortuga de manera global y relativa respectivamente. De esta manera pueden implementarse las funciones asignadas para las teclas: `R` y `SPACE`.
-
->[!Note]
->La tortuga posee su propio sistema de coordenadas. El tópico `turtle1/vel` modifica la velocidad de la tortuga en su propio sistema de referencia
-
->[!Note]
->Al cambiar el sentido de la tortuga con la tecla `SPACE`, es necesario cambiar el sentido de la velocidad para que las teclas de movimiento satisfagan su función como se describió en: [Configuración de las teclas](#Implementación+de+ROS+con+Python)
-
-### Funciones adicionales
-
-Al detectar las teclas: `Q` o `E`, la tortuga rota en sentido antihorario u horario respectivamente. Por lo que se modifica el argumento `Theta` que se envía por el tópico `turtle1/cmd_vel`.
-
->[!Note]
->Rotar la tortuga $180°$ usando estas funciones no hará que su frente sea el mismo por el que se desplaza hacia adelante. Esto no se implementó
-
-Las teclas `M` y `N` aumentan y reducen la velocidad de la tortuga respectivamente, al modificar la variable de velocidad `vf` que comienza siendo $1$.
-- Límite de velocidad mínimo: $\mid1\mid$
-- Límite de velocidad máximo: $\mid50\mid$
-
->[!Note]
->Se usó una aceleración de $2$
-
-Al presionar la tecla `Z` se termina de ejecutar el programa.
 
 
 Para más información sobre el algoritmo: [Código](https://github.com/dlozanob/Robotica/blob/main/Laboratorio%203/Programas/myTeleopKey.py)
