@@ -244,6 +244,32 @@ def getKey():
 
 La cual utiliza la librería `sys` que viene por defecto en la versión de _Python_ instalada. Esta librería de bajo nivel permite reconocer los eventos de teclado, en la función se traducen estos eventos a un caracter.
 
+## Resultados
+
+Debido a que al comparar con los resultados simulados de la interfaz se evidenciaron grandes diferencias y a que no fue posible depurar el error, se decidió realizar la comparación mediante otro código desarrollado en Matlab que permitió variar las poses y los ángulos con base a los valores requeridos. Con esto encuenta se obtuvieron los siguientes resultados:
+
+### Pose 1 - Home
+
+![imagen](https://github.com/dlozanob/Robotica/assets/64427797/6e563635-de0d-414a-b02c-663c3ce1bcc0)
+
+### Pose 2
+
+![imagen](https://github.com/dlozanob/Robotica/assets/64427797/339eb7d6-91fb-4ee4-8c44-153e751c25f1)
+
+
+### Pose 3
+
+![imagen](https://github.com/dlozanob/Robotica/assets/64427797/f98ad68d-3a24-4a61-9b9a-e78511be8208)
+
+
+### Pose 4
+
+![imagen](https://github.com/dlozanob/Robotica/assets/64427797/94850c65-5842-4c1d-93d5-da4161a6459d)
+
+### Pose 5
+
+![imagen](https://github.com/dlozanob/Robotica/assets/64427797/2845be69-e509-4942-a0d2-1dcbddc5bc07)
+
 
 ## Códigos
 
