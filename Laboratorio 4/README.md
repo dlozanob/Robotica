@@ -51,6 +51,17 @@ Posteriormente se encontraron los parámetros que describen la cinemática direc
 
 Estos parámetros fueron utilizados para configurar los eslabones y la cadena al graficar la simulación del robot en Matlab usando el toolbox de Peter Corke.
 
+Sin embargo, por simplicidad, decidimos definir el robot en su posición cero inicial como se muestra a continuación:
+
+![image](https://github.com/dlozanob/Robotica/assets/69172002/21dbe128-ba19-40c7-8603-f0c3fd5dbef9)
+
+Se hallaron los parámetros DH para esta posición:
+
+![image](https://github.com/dlozanob/Robotica/assets/69172002/a34d0998-9994-4c66-bed3-c77b15fde2a3)
+
+
+
+
 
 ## Implementación básica entre dos poses
 
